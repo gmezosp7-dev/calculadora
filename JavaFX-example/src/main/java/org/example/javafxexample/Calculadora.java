@@ -48,7 +48,13 @@ package org.example.javafxexample;
                 resultado = numeroGuardado*segundo;
             }
 
-            pantalla = String.valueOf(resultado);
+            if (resultado == Math.floor(resultado) && !Double.isInfinite(resultado)) {
+
+                pantalla = String.valueOf((long) resultado);
+            } else {
+                
+                pantalla = String.valueOf(resultado);
+            }
         }
 
         public void borrar() {
